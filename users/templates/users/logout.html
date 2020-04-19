@@ -1,0 +1,8 @@
+{% extends 'blog/base.html'%}
+{% block content %}
+    {% load crispy_forms_tags %}
+    <!-- Blog Entries Column -->
+      <div class="col-md-8 mt-4">
+      <h4>You have successfully logged out. <a href="{% url 'login' %}">Login back here</a></h4>
+      </div>
+{% endblock %}

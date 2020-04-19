@@ -1,0 +1,22 @@
+{% extends 'blog/base.html'%}
+{% block content %}
+    {% load socialaccount %}
+    {% load crispy_forms_tags %}
+    <!-- Blog Entries Column -->
+      <div class="col-md-8 mt-4">
+        <div class="card mb-4">
+            <h4 class="card-header">Login your Account</h4>
+          <div class="card-body">
+            <form method="POST"> {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a href="{% url 'password-reset' %}">Forgot Password?</a>
+                <pre></pre>
+                <a href="{% provider_login_url 'google' %}">Sign in with Google</a>
+                <pre></pre>
+                <p>Don't have an Account? <a href="{% url 'signup' %}">Sign up</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+      <!-- Blog Entries Column -->
+      <div class="col-md-8 mt-4">
+
+        <h1>Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
+          {% for post in blog_posts %}
+        <!-- Blog Post -->
+        <div class="card mb-4">
+{#          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">#}
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+              <p class="card-text">{{ post.content|truncatechars:85 }}</p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ post.date|date:'d, F, Y' }} by
+            <a href="{% url 'user-post' post.author.username %}">{{ post.author }}</a>
+          </div>
+        </div>
+          {% endfor %}
+      {% if is_paginated %}
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+          </li>
+            {% endif %}
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+          </li>
+            {% endif %}
+        </ul>
+      {% endif %}
+
+      </div>
+{% endblock %}

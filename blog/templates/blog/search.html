@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        <h1 class="my-4">Page Heading
+          <small>Secondary Text</small>
+        </h1>
+          {% for post in posts %}
+        <!-- Blog Post -->
+        <div class="card mb-4">
+{#          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">#}
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+              <p class="card-text">{{ post.content|truncatechars:85 }}</p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ post.date|date:'d, F, Y' }} by
+            <a href="{% url 'user-post' post.author.username %}">{{ post.author }}</a>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+{% endblock %}

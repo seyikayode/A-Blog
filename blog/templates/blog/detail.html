@@ -1,0 +1,61 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% load crispy_forms_tags %}
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">{{ object.title }}</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="{% url 'user-post' object.author.username %}">{{ object.author }}</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on {{ object.date }}</p>
+      {% if object.author == user %}
+              <a href="{% url 'update' post.pk %}" class="btn btn-secondary">Update</a>
+              <a href="{% url 'delete' post.pk %}" class="btn btn-danger">Delete</a>
+          {% endif %}
+
+        <hr>
+
+        <!-- Preview Image -->
+          {% if object.image %}
+        <img class="img-fluid rounded" src="{{ object.image.url }}" alt="">
+          {% endif %}
+
+        <hr>
+
+        <!-- Post Content -->
+        <p>{{ post.content }}</p>
+        <hr>
+
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form method="POST"> {% csrf_token %}
+                {{ comment_form|crispy }}
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Single Comment -->
+      {% for comment in post.comment_set.all %}
+      <div class="media mb-4">
+          <div class="media-body">
+            <h5 class="mt-0">{{ comment.name }}</h5>
+              <p>{{ comment.added_date }}</p>
+            {{ comment.comment }}
+          </div>
+      </div>
+      {% endfor %}
+
+          </div>
+{% endblock %}
