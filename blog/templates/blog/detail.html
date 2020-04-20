@@ -5,7 +5,7 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">{{ object.title }}</h1>
+        <h3 class="mt-4">{{ object.title }}</h3>
 
         <!-- Author -->
         <p class="lead">
@@ -49,6 +49,9 @@
         <!-- Single Comment -->
       {% for comment in post.comment_set.all %}
       <div class="media mb-4">
+{#      {% if user.profile.image %}#}
+{#        <img class="rounded-circle" height="100px" src="{{ user.profile.image.url }}">#}
+{#        {% endif %}#}
           <div class="media-body">
             <h5 class="mt-0">{{ comment.name }}</h5>
               <p>{{ comment.added_date }}</p>

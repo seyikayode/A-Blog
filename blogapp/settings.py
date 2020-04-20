@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'crispy_forms',
     'blog',
-    'users'
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
@@ -162,7 +162,6 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
-
 
 
 

@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
-from .forms import SignUpForm
 from django.contrib.auth import authenticate, login
-from .forms import UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
+from .forms import UserUpdateForm, ProfileUpdateForm
+from .forms import SignUpForm
+from .models import Profile
 # Create your views here.
+
+
 def register(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -20,6 +23,8 @@ def register(request):
         'form': form
     }
     return render(request, 'users/signup.html', context)
+
+
 @login_required
 def profile(request):
     if request.method == 'POST':
@@ -31,7 +36,7 @@ def profile(request):
             return redirect('profile')
     else:
         u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
     context = {
         'u_form': u_form,
         'p_form': p_form
