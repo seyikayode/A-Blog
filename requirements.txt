@@ -13,6 +13,7 @@ gitignore==0.0.8
 gunicorn==20.0.4
 idna==2.9
 oauthlib==3.1.0
+Pillow==7.1.1
 psycopg2==2.8.5
 python-dotenv==0.13.0
 python3-openid==3.1.0
