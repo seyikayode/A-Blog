@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+import cloudinary
 import os
 import django_heroku
 
@@ -48,8 +48,15 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'crispy_forms',
     'blog',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'cloudinary'
 ]
+
+cloudinary.config(
+    cloud_name=os.environ.get('CLOUD_NAME'),
+    api_key=os.environ.get('CLOUD_API_KEY'),
+    api_secret=os.environ.get('CLOUD_API_SECRET')
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
