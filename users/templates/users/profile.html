@@ -5,9 +5,9 @@
     <div class="col-md-8 mt-4">
     <div class="media">
         {% if user.profile.image %}
-        <img class="img-fluid rounded" height="100px" width="80" src="{{ user.profile.image.url }}">
+        <img class="img-fluid.max-width: 100%" height="auto" width="100" src="{{ user.profile.image.url }}">
         {% endif %}
-            <div class="media-body">
+            <div class="media-body ml-2">
                 <h2 class="account-heading">{{ user.username }}</h2>
                 <p class="text-secondary">{{ user.email }}</p>
                 <a href="{% url 'password-change' %}">Change Password</a>
