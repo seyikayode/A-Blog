@@ -5,7 +5,7 @@
     <div class="col-md-8 mt-4">
     <div class="media">
         {% if user.profile.image %}
-        <img class="img-thumbnail" src="{{ user.profile.image.url }}">
+        <img class="img-rounded" src="{{ user.profile.image.url }}">
         {% endif %}
             <div class="media-body ml-2">
                 <h2 class="account-heading">{{ user.username }}</h2>
