@@ -29,5 +29,5 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'blog.views.handler404'
-handler500 = 'blog.views.handler500'
+handler404 = 'blog.views.page_not_found_custom'
+handler500 = 'blog.views.page_error_found_custom'
