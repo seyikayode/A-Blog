@@ -1,9 +1,9 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
 from django.db.models import Q
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
-from django.views.generic.edit import FormMixin
+from django.contrib.auth.decorators import login_required
 from .models import Post
 from .forms import CommentForm
 # Create your views here.
@@ -28,30 +28,27 @@ class UserPostList(ListView):
         return Post.objects.filter(author=user).order_by('-date')
 
 
-class PostDetail(LoginRequiredMixin, DetailView, FormMixin):
-    model = Post
-    template_name = 'blog/detail.html'
-    form_class = CommentForm
 
-    def get_success_url(self):
-        return reverse('post-detail', kwargs={'pk': self.object.id})
-
-    def get_context_data(self, **kwargs):
-        context = super(PostDetail, self).get_context_data(**kwargs)
-        context['comment_form'] = CommentForm(initial={'post': self.object})
-        return context
-
-    def post(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        form = self.get_form()
-        if form.is_valid():
-            return self.form_valid(form)
-        else:
-            return self.form_invalid(form)
-
-    def form_valid(self, form):
-        form.save()
-        return super(PostDetail, self).form_valid(form)
+@login_required
+def PostDetail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    comments = post.comments.filter(active=True)
+    new_comment = None
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = post
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+    context = {
+        'post': post,
+        'comments': comments,
+        'new_comment': new_comment,
+        'comment_form': comment_form
+    }
+    return render(request, 'blog/detail.html', context)
 
 
 class CreatePost(LoginRequiredMixin, PermissionRequiredMixin, CreateView):

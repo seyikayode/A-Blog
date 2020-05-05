@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="1c380c21-c6cd-4a9c-a008-329794114b55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blogapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../covid19" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codeteacher-master" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -117,7 +125,20 @@
       <workItem from="1587602438181" duration="568000" />
       <workItem from="1587604564105" duration="8000" />
       <workItem from="1587607775569" duration="583000" />
-      <workItem from="1587689793799" duration="255000" />
+      <workItem from="1587689793799" duration="686000" />
+      <workItem from="1587691372449" duration="44000" />
+      <workItem from="1587691783146" duration="270000" />
+      <workItem from="1587729356377" duration="622000" />
+      <workItem from="1587730418351" duration="11000" />
+      <workItem from="1587772144282" duration="415000" />
+      <workItem from="1587948446971" duration="650000" />
+      <workItem from="1587973912688" duration="2241000" />
+      <workItem from="1588282090921" duration="303000" />
+      <workItem from="1588351099459" duration="6697000" />
+      <workItem from="1588367555830" duration="17000" />
+      <workItem from="1588368433942" duration="1428000" />
+      <workItem from="1588432595532" duration="30000" />
+      <workItem from="1588636480252" duration="4470000" />
     </task>
     <servers />
   </component>

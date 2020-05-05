@@ -21,9 +21,10 @@ class Post(models.Model):
 
 class Comment(models.Model):
     name = models.CharField(max_length=100)
-    comment = models.TextField()
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    body = models.TextField()
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
     added_date = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.comment
+        return self.body

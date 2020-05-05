@@ -42,11 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'crispy_forms',
+    'easy_thumbnails',
     'blog',
     'users.apps.UsersConfig',
     'cloudinary'

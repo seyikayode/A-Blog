@@ -1,23 +1,24 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+    {% load thumbnail %}
     {% load crispy_forms_tags %}
       <!-- Post Content Column -->
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h3 class="mt-4">{{ object.title }}</h3>
+        <h3 class="mt-4">{{ post.title }}</h3>
 
         <!-- Author -->
         <p class="lead">
           by
-          <a href="{% url 'user-post' object.author.username %}">{{ object.author }}</a>
+          <a href="{% url 'user-post' post.author.username %}">{{ post.author }}</a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on {{ object.date }}</p>
-      {% if object.author == user %}
+        <p>Posted on {{ post.date }}</p>
+      {% if post.author == user %}
               <a href="{% url 'update' post.pk %}" class="btn btn-secondary">Update</a>
               <a href="{% url 'delete' post.pk %}" class="btn btn-danger">Delete</a>
           {% endif %}
@@ -25,8 +26,8 @@
         <hr>
 
         <!-- Preview Image -->
-          {% if object.image %}
-        <img class="img-fluid rounded" src="{{ object.image.url }}" alt="">
+          {% if post.image %}
+        <img class="img-fluid rounded" src="{% thumbnail post.image 600x900 %}" alt="">
           {% endif %}
 
         <hr>
@@ -34,9 +35,15 @@
         <!-- Post Content -->
         <p>{{ post.content }}</p>
         <hr>
+      <p>Share to <a href="https://www.facebook.com/sharer.php?href={{ post.get_absolute_url }}">facebook</a>,
+       <a href="https://wa.me/?text={{ post.get_absolute_url }}">whatsapp</a></p>
+      <hr>
 
         <!-- Comments Form -->
         <div class="card my-4">
+      {% if new_comment %}
+            <h5>Your comment has been added</h5>
+            {% else %}
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body">
             <form method="POST"> {% csrf_token %}
@@ -44,10 +51,11 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
+        {% endif %}
         </div>
 
         <!-- Single Comment -->
-      {% for comment in post.comment_set.all %}
+      {% for comment in comments %}
       <div class="media mb-4">
 {#      {% if user.profile.image %}#}
 {#        <img class="rounded-circle" height="100px" src="{{ user.profile.image.url }}">#}
@@ -55,7 +63,7 @@
           <div class="media-body">
             <h5 class="mt-0">{{ comment.name }}</h5>
               <p>{{ comment.added_date }}</p>
-            {{ comment.comment }}
+            {{ comment.body }}
           </div>
       </div>
       {% endfor %}
