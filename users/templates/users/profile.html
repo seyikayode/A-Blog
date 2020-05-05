@@ -1,12 +1,11 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-    {% load thumbnail %}
     {% load crispy_forms_tags %}
     {% load static %}
     <div class="col-md-8 mt-4">
     <div class="media">
         {% if user.profile.image %}
-        <img class="rounded-circle" height="100px" src="{% thumbnail user.profile.image 300x0 %}">
+        <img class="rounded-circle" height="100px" src="{{ user.profile.image.url }}">
         {% endif %}
             <div class="media-body ml-2">
                 <h2 class="account-heading">{{ user.username }}</h2>

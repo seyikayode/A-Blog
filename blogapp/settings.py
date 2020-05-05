@@ -42,13 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django.contrib.sitemaps',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'crispy_forms',
-    'easy_thumbnails',
     'blog',
     'users.apps.UsersConfig',
     'cloudinary'
@@ -143,8 +141,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 os.makedirs('static_files', exist_ok=True)
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
-os.makedirs('media_root', exist_ok=True)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+os.makedirs('media', exist_ok=True)
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

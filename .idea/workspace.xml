@@ -2,15 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c380c21-c6cd-4a9c-a008-329794114b55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/sitemaps.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blogapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blogapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/20190317_102817.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/20190317_102817.jpg.300x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/20190423_090624.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/20190423_090624.jpg.300x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.100x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.300x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.400x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.400x1000_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.400x800_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x1000_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x2000_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x3_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x500_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x50_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x700_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.500x900_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.550x2000_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.600x900_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x1000_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x200_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x300_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x500_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x700_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_CApcsLZ.jpg.700x900_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_Faj9DZL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_a6eVAG8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_uQUZxCk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_uQUZxCk.jpg.100x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_uQUZxCk.jpg.200x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_uQUZxCk.jpg.300x0_q100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_uQUZxCk.jpg.300x0_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flo_uQUZxCk.jpg.300x5_q85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flower.jpg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_root/flower.jpg.jpg.300x0_q85.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -138,7 +171,7 @@
       <workItem from="1588367555830" duration="17000" />
       <workItem from="1588368433942" duration="1428000" />
       <workItem from="1588432595532" duration="30000" />
-      <workItem from="1588636480252" duration="4470000" />
+      <workItem from="1588636480252" duration="5251000" />
     </task>
     <servers />
   </component>
