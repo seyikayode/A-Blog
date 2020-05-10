@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c380c21-c6cd-4a9c-a008-329794114b55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codeteacher-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ContentAggregator" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -130,7 +129,11 @@
       <workItem from="1588367555830" duration="17000" />
       <workItem from="1588368433942" duration="1428000" />
       <workItem from="1588432595532" duration="30000" />
-      <workItem from="1588636480252" duration="6443000" />
+      <workItem from="1588636480252" duration="7262000" />
+      <workItem from="1588666254522" duration="119000" />
+      <workItem from="1588856994564" duration="56000" />
+      <workItem from="1589062570696" duration="862000" />
+      <workItem from="1589064171844" duration="1278000" />
     </task>
     <servers />
   </component>

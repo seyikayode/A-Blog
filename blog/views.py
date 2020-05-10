@@ -28,7 +28,6 @@ class UserPostList(ListView):
         return Post.objects.filter(author=user).order_by('-date')
 
 
-
 @login_required
 def PostDetail(request, pk):
     post = get_object_or_404(Post, pk=pk)
